@@ -5,7 +5,6 @@
 # Always go through the BlobsController, or your own authenticated controller, rather than directly
 # to the service url.
 class ActiveStorage::DiskController < ActiveStorage::BaseController
-  skip_forgery_protection
 
   def show
     if key = decode_verified_key
